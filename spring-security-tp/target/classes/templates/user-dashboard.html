@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Espace Utilisateur - Spring Security</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #17a2b8 0%, #20c997 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .welcome-message {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .nav-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-home {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-user {
+            background: #17a2b8;
+            color: white;
+        }
+
+        .btn-admin {
+            background: #6f42c1;
+            color: white;
+        }
+
+        .btn-logout {
+            background: #dc3545;
+            color: white;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .permission-card {
+            background: #d1ecf1;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #17a2b8;
+            margin-bottom: 20px;
+        }
+
+        .permission-card h3 {
+            color: #0c5460;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .permission-card p {
+            color: #0c5460;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .feature {
+            background: #bee5eb;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>👤 Espace Utilisateur</h1>
+        <p class="welcome-message">Bienvenue dans votre espace personnel !</p>
+
+        <div class="nav-menu">
+            <a href="/" class="nav-btn btn-home">🏠 Accueil</a>
+            <a href="/user/dashboard" class="nav-btn btn-user">👤 Espace Utilisateur</a>
+            <a href="/admin/dashboard" class="nav-btn btn-admin">⚙️ Espace Admin</a>
+            <a href="/logout" class="nav-btn btn-logout">🚪 Déconnexion</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="permission-card">
+            <h3>✅ Permissions</h3>
+            <p>Cette page est accessible aux rôles <strong>USER</strong> et <strong>ADMIN</strong>.</p>
+            <p>Vous avez accès aux fonctionnalités utilisateur de base.</p>
+
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <div>Tableau de bord</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👤</div>
+                    <div>Profil utilisateur</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚙️</div>
+                    <div>Paramètres</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

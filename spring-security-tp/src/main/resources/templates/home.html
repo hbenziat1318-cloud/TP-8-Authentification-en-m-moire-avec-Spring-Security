@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil - Spring Security</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .welcome-message {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .nav-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-home {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-user {
+            background: #17a2b8;
+            color: white;
+        }
+
+        .btn-admin {
+            background: #6f42c1;
+            color: white;
+        }
+
+        .btn-logout {
+            background: #dc3545;
+            color: white;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .info-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🏠 Page d'Accueil</h1>
+        <p class="welcome-message">Bienvenue ! Vous êtes connecté avec succès.</p>
+
+        <div class="nav-menu">
+            <a href="/" class="nav-btn btn-home">🏠 Accueil</a>
+            <a href="/user/dashboard" class="nav-btn btn-user">👤 Espace Utilisateur</a>
+            <a href="/admin/dashboard" class="nav-btn btn-admin">⚙️ Espace Admin</a>
+            <a href="/logout" class="nav-btn btn-logout">🚪 Déconnexion</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="info-card">
+            <h3>📋 Information</h3>
+            <p>Cette page d'accueil est accessible à tous les utilisateurs authentifiés.
+                Vous pouvez naviguer vers les différentes sections selon vos permissions.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
